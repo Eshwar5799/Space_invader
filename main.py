@@ -36,7 +36,7 @@ def show(x, y):
 
 # Game over
 def game_over_text(x, y):
-    over_score = font.render("GAME OVER", True, (255, 255, 255))
+    over_score = font.render("GAME OVER,FINAL SCORE :" + str(score_value), True, (255, 255, 255))
     screen.blit(over_score, (x, y))
 
 
@@ -160,7 +160,7 @@ while running:
             break
         enemyX[i] += enemyX_change[i]
         if enemyX[i] <= 0:
-            enemyX_change = 2
+            enemyX_change[i] = 2
             enemyY[i] += enemyY_change[i]
         if enemyX[i] >= 720:
             enemyX_change[i] = -2
